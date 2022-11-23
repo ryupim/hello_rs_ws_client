@@ -6,7 +6,7 @@ fn main() {
     let (mut socket, _response) = connect(Url::parse("ws://localhost:8765").unwrap()).expect("Cant connect");
 
     loop {
-        println!("何か文字を入力してください");
+        println!("Please input some strings");
         let mut word = String::new();
         std::io::stdin().read_line(&mut word).ok();
         let answer = word.trim().to_string();
